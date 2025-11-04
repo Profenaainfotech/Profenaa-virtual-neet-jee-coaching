@@ -1,0 +1,226 @@
+ *{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+ }
+/* Navbar Styles */
+.navbar {
+  background-color:#1E3A8A;
+  position: fixed;
+  padding-top: 10px;
+   padding-bottom: 10px;
+  width: 100%;
+  z-index: 1000;
+  animation: slideDown 0.6s ease-in-out;
+  top: 0;
+  left: 0;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 1rem; 
+}
+
+.navbar-brand {
+    gap: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  width: 40px; 
+  height: 40px;
+  border-radius: 10px;
+  margin-right: 0px;
+}
+
+.brand-text {
+  font-size: 1rem; 
+  font-weight: bold;
+  color: white;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  padding: 8px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: rgb(199, 199, 199);
+  transform: translateY(-2px);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 0.95rem;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.dropdown-btn:hover {
+  color: rgb(199, 199, 199);
+
+}
+.dropdown-content {
+  position: absolute;
+  background-color:white;
+  top: 25px;
+  left: 0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  min-width: 250px;
+  z-index: 1001;
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scaleY(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: #1E3A8A;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #90acf8;
+  color:white;
+}
+
+.login-btn {
+  background-color:white;
+  color: #000 !important;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: rgb(201, 201, 201);
+  transform: scale(1.05);
+}
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: row;
+    padding: 0.5rem 1rem;
+  }
+
+  .menu-icon {
+    display: block;
+    margin-left: auto;
+  }
+
+  .navbar-links {
+    width: 50%;
+    position: absolute;
+    top: 50px; 
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    padding: 1rem;
+    display: none;
+    gap: 1rem;
+    z-index: 999;
+    border-top: 1px solid black;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links a,
+  .dropdown-btn,
+  .login-btn {
+    width: 100%;
+    text-align: left;
+    padding: 0.4rem 0.8rem; 
+    color: black;
+
+  }
+
+  .login-btn {
+    background-color:#1E3A8A;
+    color:white !important;
+  }
+  .login-btn:hover{
+  background-color: #a1a5b3;
+  }
+  .dropdown:click .dropdown-content {
+    display: none;
+  }
+  .dropdown-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    width: 100%;
+    padding-left: 1rem;
+    display: none;
+  }
+
+  .dropdown-content.active {
+    display: block;
+  }
+
+  .dropdown-content a {
+    padding: 0.5rem 0;
+    color:#1E3A8A;
+  }
+}
+@media (min-width: 769px) {
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}

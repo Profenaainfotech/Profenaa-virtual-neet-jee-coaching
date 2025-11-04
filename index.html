@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profenaa Virtual NEET & JEE Coaching</title>
+    <link rel="Stylesheet" href="home.css">
+   <link rel="icon" type="image/png" href="Assets/academy logo.png">
+
+<!-- ✅ Meta Description (Under 160 characters) -->
+<meta name="description" content="Join Profenaa Virtual Academy — India’s top-rated NEET & JEE online coaching platform offering expert faculty, live classes, and AI-based test series.">
+
+<!-- ✅ Keywords -->
+<meta name="keywords" content="Join Profenaa Virtual Academy for NEET & JEE Coaching. Expert faculty, live sessions,
+test analysis & personalized mentorship for Tamil Nadu students, NEET online coaching, JEE online coaching, best NEET academy, best JEE academy, 
+Profenaa Academy, online NEET classes, online JEE preparation, NEET live coaching, JEE test series, NEET repeaters batch, JEE crash course">
+
+<!-- ✅ Canonical URL -->
+<link rel="canonical" href="https://online.profenaaneetjee.com/">
+
+<!-- ✅ Open Graph (For social media sharing) -->
+<meta property="og:title" content="Profenaa Academy | Best NEET & JEE Online Coaching in India">
+<meta property="og:description" content="Crack NEET & JEE with Profenaa Virtual Academy – Live classes, AI-powered tests, and expert faculty support. Enroll now!">
+<meta property="og:image" content="https://online.profenaaneetjee.com/Assets/academy%20logo.png">
+<meta property="og:url" content="https://online.profenaaneetjee.com/">
+<meta property="og:type" content="website">
+
+<!-- ✅ Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Profenaa Academy | Best NEET & JEE Online Coaching in India">
+<meta name="twitter:description" content="Join India’s best online NEET & JEE academy for live, interactive learning.">
+<meta name="twitter:image" content="https://online.profenaaneetjee.com/Assets/academy%20logo.png">
+
+</head>
+<body>                 
+
+ <!-- Navbar Placeholder -->
+  <div id="navbar-placeholder"></div>
+  
+  <script src="load.js"></script>
+
+  <!-- section1  -->
+   
+ 
+  <section class="section1-hero">
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline>
+      <source src="Assets/video1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Overlay -->
+    <div class="section1-overlay"></div>
+
+    <!-- Content on top -->
+    <div class="section1-content">
+      <h1>Profenaa Academy – Best Online Learning Platform for 
+        <span id="section1-rotate" class="active">NEET</span>
+      </h1>
+      <p>Your Dream Entrance Exam with Expert - Led Online Courses from Top Faculties</p>
+      <a href="#" class="section1-btn">Enroll Now →</a>
+    </div>
+  </section>
+<script>
+  document.querySelector('.section1-btn').addEventListener('click', function(e) {
+    e.preventDefault(); // prevent page scroll or reload
+    document.getElementById('overlay').classList.add('active');
+  });
+
+  document.getElementById('closeBtn').addEventListener('click', function() {
+    document.getElementById('overlay').classList.remove('active');
+  });
+
+  // Optional: close form when clicking outside it
+  window.addEventListener('click', function(e) {
+    if (e.target === document.getElementById('overlay')) {
+      document.getElementById('overlay').classList.remove('active');
+    }
+  });
+</script>
+
+  <script>
+    // Rotating text with bottom-to-up effect
+    const words = ["NEET", "JEE", "Foundation", "Crash Course", "Repeaters"];
+    let index = 0;
+    const span = document.getElementById("section1-rotate");
+
+    setInterval(() => {
+      span.classList.remove("active");
+      setTimeout(() => {
+        index = (index + 1) % words.length;
+        span.textContent = words[index];
+        span.classList.add("active");
+      }, 600);
+    }, 2500);
+
+    // Scroll & Refresh animation
+    const section1Content = document.querySelector(".section1-content");
+
+    function checkVisibility() {
+      const rect = section1Content.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        section1Content.classList.add("visible");
+      }
+    }
+
+    // On load
+    window.addEventListener("load", checkVisibility);
+    // On scroll
+    window.addEventListener("scroll", checkVisibility);
+  </script>
+
+  <!-- section 2 -->
+
+    <section class="section2-container">
+    <h2>Explore our <span>Digital Courses</span></h2>
+    <p>Learn from expert faculty right from the comfort of your home with online classes</p>
+
+    <div class="section2-cards">
+      <!-- Card 1 -->
+      <div class="section2-card">
+        <img src="Assets/Exams-rafiki.png" alt="NEET">
+        <h3>NEET Courses Online</h3>
+        <div class="section2-tags">
+          <span>Class 11</span><span>Class 12</span><span>Class 12+</span>
+        </div>
+        <a href="#" class="section2-link">View Courses →</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="section2-card">
+        <img src="Assets/Online test-rafiki.png" alt="JEE">
+        <h3>JEE Courses Online</h3>
+        <div class="section2-tags">
+          <span>Class 11</span><span>Class 12</span><span>Class 12+</span>
+        </div>
+        <a href="#" class="section2-link">View Courses →</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="section2-card">
+        <img src="Assets/Social networking-rafiki.png" alt="Foundation">
+        <h3>Foundation (Class 6 -10)</h3>
+        <div class="section2-tags">
+          <span>Class 6</span><span>Class 7</span><span>Class 8</span><span>Class 9</span><span>Class 10</span>
+        </div>
+        <a href="#" class="section2-link">View Courses →</a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="section2-card">
+        <img src="Assets/Thesis-rafiki.png" alt="Crash Course">
+        <h3>Crash Course</h3>
+        <div class="section2-tags">
+          <span>NEET</span><span>JEE</span>
+        </div>
+        <a href="#" class="section2-link">View Courses →</a>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="section2-card">
+        <img src="Assets/Studying-rafiki.png" alt="Repeaters">
+        <h3>Repeaters</h3>
+        <div class="section2-tags">
+          <span>NEET</span><span>JEE</span>
+        </div>
+        <a href="#" class="section2-link">View Courses →</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Scroll animation
+    const cards = document.querySelectorAll('.section2-card');
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      cards.forEach(card => {
+        const boxTop = card.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+          card.classList.add('show');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+
+  <!-- section 3  -->
+   <section class="section3">
+
+  <div class="section3-left">
+    <h2>Our top features that will help you <b>crack NEET</b></h2><br><br>
+    
+    <div class="section3-feature-item">
+      <div class="section3-feature-number">01.</div>
+      <div class="section3-feature-text">
+        <h3>Audio/Video Explanations</h3>
+        <p>Quality audio video explanation provided with the entire question bank.</p>
+      </div>
+    </div>
+
+    <div class="section3-feature-item">
+      <div class="section3-feature-number">02.</div>
+      <div class="section3-feature-text">
+        <h3>Custom Tests</h3>
+        <p>Evaluate your performance with customizable tests – Choose subject, chapter, topic & length.</p>
+      </div>
+    </div>
+
+    <div class="section3-feature-item">
+      <div class="section3-feature-number">03.</div>
+      <div class="section3-feature-text">
+        <h3>Flashcards</h3>
+        <p>Quick revision and memorization of important NCERT statements.</p>
+      </div>
+    </div>
+
+     <div class="section3-feature-item">
+      <div class="section3-feature-number">04.</div>
+      <div class="section3-feature-text">
+        <h3>DPP Generator</h3>
+        <p>Instantly create personalized Daily Practice Problems (DPPs) to boost your NEET & JEE preparation</p>
+      </div>
+    </div>
+    <div class="section3-feature-item">
+      <div class="section3-feature-number">05.</div>
+      <div class="section3-feature-text">
+        <h3>Mindmaps</h3>
+        <p>Visualize concepts with interactive mindmaps for faster learning.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section3-right">
+    <div class="section3-shape"></div>
+    <img src="Assets/unique.jpg" alt="Feature Image">
+  </div>
+</section>
+
+
+  <!-- // Scroll animation for feature items -->
+  <script>
+    // Wait until DOM is ready
+    document.addEventListener('DOMContentLoaded', () => {
+      const items = document.querySelectorAll('.section3-feature-item');
+
+      // If IntersectionObserver supported -> use it (recommended)
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('show');
+              // optional: unobserve so it only animates once
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.12
+        });
+
+        items.forEach(it => io.observe(it));
+      } else {
+        // Fallback for old browsers: simple scroll check
+        const revealOnScroll = () => {
+          const winH = window.innerHeight || document.documentElement.clientHeight;
+          items.forEach(item => {
+            const rect = item.getBoundingClientRect();
+            if (rect.top < winH - 80) item.classList.add('show');
+          });
+        };
+        // run once and attach listeners
+        revealOnScroll();
+        window.addEventListener('scroll', revealOnScroll, { passive:true });
+        window.addEventListener('resize', revealOnScroll);
+      }
+    });
+</script>
+
+<!-- section 4  -->
+  <section class="section4-container">
+    <div class="section4-card-grid">
+      <!-- Card 1 -->
+      <div class="section4-card section4-card-orange" data-aos="fade-up">
+        <div class="section4-card-text">
+          <h3 class="section4-title">300+ NEET selections</h3>
+          <p class="section4-description">
+            Highest number of selections in government medical colleges across India from an online teaching platform
+          </p>
+        </div>
+      
+      </div>
+
+      <!-- Card 2 -->
+      <div class="section4-card section4-card-purple" data-aos="fade-up">
+        <div class="section4-card-text">
+          <h3 class="section4-title">Customizable Tests</h3>
+          <p class="section4-description">
+            Create your own mock tests from topic-wise question banks and practice efficiently.
+          </p>
+        </div>
+        <div class="section4-card-icon">📘</div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="section4-card section4-card-blue" data-aos="fade-up">
+        <div class="section4-card-text">
+          <h3 class="section4-title">#1 in Exclusive Content</h3>
+          <p class="section4-description">
+            India's top platform for exclusive NEET-focused content and video lectures.
+          </p>
+        </div>
+        <div class="section4-card-icon">🏆</div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="section4-card section4-card-green" data-aos="fade-up">
+        <div class="section4-card-text">
+          <h3 class="section4-title">Expert Doubts</h3>
+          <p class="section4-description">
+            Clear your doubts instantly with subject experts available all day.
+          </p>
+        </div>
+        <div class="section4-card-icon">💬</div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="section4-card section4-card-pink" data-aos="fade-up">
+        <div class="section4-card-text">
+          <h3 class="section4-title">Performance Analytics</h3>
+          <p class="section4-description">
+            Get deep insights on your weak topics and improve accuracy via detailed analysis.
+          </p>
+        </div>
+        <div class="section4-card-icon">📊</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scroll Animation -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: false });
+  </script>
+
+<!-- section 5  -->
+ <section class="section5-container">
+    <div class="section5-title">THOUSANDS TRUST</div>
+    <div class="section5-heading">NEETPrep Platform</div>
+
+    <div class="section5-stats">
+      <!-- Item 1 -->
+      <div class="section5-stat-item">
+        <img src="https://img.icons8.com/color/96/conference-call.png" alt="Visitors">
+        <div class="section5-number" data-target="50">0</div>
+        <div class="section5-label">Daily visitors</div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="section5-stat-item">
+        <img src="https://img.icons8.com/color/96/faq.png" alt="Questions">
+        <div class="section5-number" data-target="2000">0</div>
+        <div class="section5-label">Questions Attempted</div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="section5-stat-item">
+        <img src="https://img.icons8.com/color/96/test-passed.png" alt="Tests">
+        <div class="section5-number" data-target="1000">0</div>
+        <div class="section5-label">Tests Generated</div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Number Counter
+    function animateCounter(element) {
+      const target = +element.getAttribute("data-target");
+      const duration = 2000;
+      const step = target / (duration / 16);
+
+      let count = 0;
+
+      function updateCounter() {
+        count += step;
+        if (count < target) {
+          element.textContent = Math.floor(count).toLocaleString();
+          requestAnimationFrame(updateCounter);
+        } else {
+          element.textContent = target.toLocaleString();
+        }
+      }
+      updateCounter();
+    }
+
+    // Intersection Observer for scroll animations
+    const items = document.querySelectorAll(".section5-stat-item");
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            const number = entry.target.querySelector(".section5-number");
+            animateCounter(number);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    items.forEach((item) => {
+      observer.observe(item);
+    });
+
+  </script>
+
+
+    <!-- Section 7 Start -->
+  <section class="section7-container">
+    <h2>Student Success Stories</h2>
+    <div class="section7-grid">
+      <div class="section7-card">
+        <p class="section7-text">“Joining this Virtual Academy for NEET prep was the best decision I ever made. The interactive classes and doubt-solving sessions gave me complete clarity.”</p>
+        <span class="section7-author">- Ananya, NEET Aspirant</span>
+      </div>
+      <div class="section7-card">
+        <p class="section7-text">“The JEE mock tests felt exactly like the real exam! The detailed analysis helped me improve my weak areas and boosted my confidence.”</p>
+        <span class="section7-author">- Rohan, JEE Aspirant</span>
+      </div>
+      <div class="section7-card">
+        <p class="section7-text">“The mentors are amazing! Their guidance and the futuristic online platform made learning easy, fun, and super effective.”</p>
+        <span class="section7-author">- Priya, NEET 2024 Candidate</span>
+      </div>
+    </div>
+  </section>
+  <!-- Section 7 End -->
+
+  
+  <!-- section 6 -->
+
+  <!-- Section 6 Start -->
+  <section class="section6-container">
+    <div class="section6-text">
+      <h2>Happy To Help!</h2>
+      <p>Book a free consulting session with our Expert</p>
+      <a href="tel:+919500027638" class="section6-btn">📞 +91 9500027638</a>
+    </div>
+    <div class="section6-image">
+      <!-- Free stock nurse/consultant image -->
+      <img src="Assets/customer-service-agent.png" alt="Consultant Expert">
+    </div>
+  </section>
+  <!-- Section 6 End -->
+ <!-- Section 8 Start -->
+  <section class="section8-container">
+    <h2>Frequently Asked Questions</h2>
+    <div class="section8-faq">
+
+      <div class="section8-item">
+        <div class="section8-question">What is the Virtual NEET & JEE Academy?</div>
+        <div class="section8-answer">
+          Our academy is a futuristic online learning platform designed to prepare students for NEET & JEE with interactive classes, live doubt-solving, and AI-powered practice tests.
+        </div>
+      </div>
+
+      <div class="section8-item">
+        <div class="section8-question">How are classes conducted?</div>
+        <div class="section8-answer">
+          All classes are conducted online via live sessions with experienced faculty. Recordings are also available for revision anytime.
+        </div>
+      </div>
+
+      <div class="section8-item">
+        <div class="section8-question">Do you provide mock tests and study materials?</div>
+        <div class="section8-answer">
+          Yes, we provide chapter-wise study materials, daily practice questions, and full-length mock tests that simulate the real NEET & JEE exams.
+        </div>
+      </div>
+
+      <div class="section8-item">
+        <div class="section8-question">Can I clear my doubts instantly?</div>
+        <div class="section8-answer">
+          Absolutely! Our doubt-solving sessions and 24/7 doubt portal ensure that no question goes unanswered.
+        </div>
+      </div>
+
+      <div class="section8-item">
+        <div class="section8-question">Is there a free trial available?</div>
+        <div class="section8-answer">
+          Yes, you can book a free demo session to experience our platform and teaching style before enrolling.
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- Section 8 End -->
+
+  <script>
+    // FAQ Accordion Script
+    const faqItems = document.querySelectorAll('.section8-item');
+
+    faqItems.forEach(item => {
+      item.querySelector('.section8-question').addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+
+ <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919500027638" target="_blank" class="whatsapp-float" aria-label="Chat with us on WhatsApp">
+  <div class="wa-bubble">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="currentColor"
+        d="M20.52 3.48A11.9 11.9 0 0 0 12 0C5.37 0 .08 5.29 .08 11.92c0 2.1.56 4.15 1.62 5.95L0 24l6.42-1.68c1.6.88 3.4 1.34 5.18 1.34 6.63 0 11.92-5.29 11.92-11.92 0-3.18-1.24-6.03-3.82-8.66zM12 21.3c-1.6 0-3.15-.42-4.5-1.2l-.32-.18-3.8.99.99-3.7-.21-.35A8.02 8.02 0 0 1 3.1 11.92c0-4.93 4.02-8.95 8.95-8.95 4.93 0 8.95 4.02 8.95 8.95 0 4.93-4.02 8.95-8.95 8.95zM16.4 14.5c-.26-.13-1.54-.76-1.78-.85-.24-.09-.42-.13-.6.13-.18.26-.72.85-.88 1.03-.16.18-.32.2-.59.07-.27-.13-1.14-.42-2.17-1.34-.8-.7-1.34-1.57-1.5-1.84-.16-.27-.02-.42.11-.55.11-.11.24-.28.36-.42.12-.13.16-.22.24-.37.08-.15.04-.28-.02-.41-.06-.13-.6-1.45-.82-1.99-.22-.52-.45-.45-.61-.46l-.52-.01c-.18 0-.47.07-.72.34-.25.27-.96.94-.96 2.29 0 1.35.98 2.65 1.12 2.83.14.18 1.94 3.02 4.7 4.14 2.76 1.12 2.76.74 3.26.7.5-.04 1.62-.66 1.85-1.3.23-.64.23-1.19.16-1.3-.07-.11-.26-.17-.52-.3z"/>
+    </svg>
+  </div>
+</a>
+<!-- Overlay Form -->
+<div class="overlay" id="overlay">
+  <div class="overlay-form">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <h2>Join Profenaa Courses</h2>
+
+    <form id="profenaaForm" action="https://api.web3forms.com/submit" method="POST">
+      <!-- Web3Forms Access Key -->
+      <input type="hidden" name="access_key" value="99e50867-139e-40f4-9053-a2f304ccb71a">
+
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="number" placeholder="Mobile Number" required pattern="[0-9]{10}">
+      <select name="course" required>
+        <option value="">Select Course</option>
+        <option value="neet">NEET</option>
+        <option value="jee">JEE</option>
+        <option value="foundation">Foundation Course</option>
+        <option value="crash">Crash Course</option>
+      </select>
+      <textarea name="comment" placeholder="Your Comment"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const overlay = document.getElementById('overlay');
+  const closeBtn = document.getElementById('closeBtn');
+
+  // Show overlay after 3 seconds
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }, 3000);
+  });
+
+  // Close button
+  closeBtn.addEventListener('click', () => {
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  });
+
+  // Click outside the form to close
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+      overlay.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+  });
+
+  // Handle form submission via Web3Forms
+  document.getElementById('profenaaForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData
+      });
+      const result = await response.json();
+
+      if (result.success) {
+        alert('✅ Form submitted successfully!');
+        form.reset();
+        overlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      } else {
+        alert('❌ Submission failed. Please try again later.');
+      }
+    } catch (error) {
+      alert('⚠️ Something went wrong. Please try again.');
+    }
+  });
+</script>
+
+
+</body>
+<!-- Footer Placeholder -->
+<div id="footer-placeholder"></div>
+
+<script src="load1.js"></script>
+
+</html>

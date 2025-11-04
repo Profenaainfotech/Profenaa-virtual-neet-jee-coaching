@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Profenaa Virtual NEET & JEE Coaching</title>
+    <link href="blog1.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Assets/academy logo.png">
+
+     <meta name="description" content="Know about Profenaa Academy, Pollachi’s leading institute for NEET, JEE, Crash Course, Foundation, and Repeaters programs. Learn our mission, vision, expert faculty, and academic excellence." />
+  <meta name="keywords" content="Profenaa Academy Pollachi, NEET coaching Pollachi, JEE coaching Pollachi, Crash Course NEET Pollachi, JEE Crash Course Pollachi, Foundation Courses Pollachi, Repeaters Batch Pollachi, NEET Repeaters Pollachi, JEE Repeaters Pollachi, Best Coaching in Pollachi, Profenaa NEET, Profenaa JEE, Profenaa Academy About Us, Best NEET Academy in Pollachi, Best JEE Academy in Pollachi, Profenaa Foundation Courses, Profenaa Crash Course, Profenaa Repeaters Program" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="About Profenaa Academy | NEET, JEE, Crash Course, Foundation & Repeaters in Pollachi" />
+  <meta property="og:description" content="Discover Profenaa Academy, Pollachi’s top institute for NEET, JEE, Crash Course, Foundation & Repeaters. Know our journey, success stories, and expert teaching methods." />
+  <meta property="og:url" content="https://profenaaacademy.com/about.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://profenaaacademy.com/Assets/academy-logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Profenaa Academy - NEET, JEE, Crash Course, Foundation & Repeaters in Pollachi" />
+  <meta name="twitter:description" content="Explore Profenaa Academy in Pollachi — leading NEET & JEE coaching institute offering Crash Course, Foundation & Repeaters programs." />
+  <meta name="twitter:image" content="https://profenaaacademy.com/Assets/academy-logo.png" />
+
+</head>
+<body>
+  <!-- Navbar Placeholder -->
+  <div id="navbar-placeholder"></div>
+  
+  <script src="load.js"></script>
+
+  <header>
+    <h1>Why Pollachi Students Choose Profenaa Academy</h1>
+    <p>The <span class="highlight">top and best NEET & JEE coaching</span> for Pollachi’s brightest achievers.</p>
+  </header>
+
+  <section>
+    <h2>Top Coaching Hub for Pollachi Students</h2>
+    <p>
+      Pollachi has become a hotspot for ambitious learners, and when it comes to competitive exams like NEET and JEE, <span class="highlight">Profenaa Academy</span> stands as the <span class="highlight">best coaching centre near Pollachi</span>. Our expert faculty and digital learning approach make Pollachi students shine in every examination.
+    </p>
+  </section>
+
+  <section>
+    <h2>Best NEET & JEE Coaching for Pollachi Aspirants</h2>
+    <p>
+      With a student-first philosophy, Profenaa offers <span class="highlight">Pollachi students</span> the most effective and engaging way to learn. Our structured study plans, smart assessments, and interactive sessions ensure Pollachi’s youth achieve their dream ranks with confidence and precision.
+    </p>
+  </section>
+
+  <section>
+    <h2>Why Pollachi Parents Trust Profenaa</h2>
+    <p>
+      Parents in Pollachi rely on <span class="highlight">Profenaa’s proven track record</span> of results and discipline. From conceptual clarity to emotional well-being, our system ensures holistic development — making us the <span class="highlight">top choice for Pollachi families</span> seeking quality education.
+    </p>
+  </section>
+
+  <section>
+    <h2>Personalized Learning for Pollachi Toppers</h2>
+    <p>
+      At Profenaa, every student from Pollachi receives personal attention and mentorship. Whether it’s live classes, digital mock tests, or one-on-one sessions, our approach guarantees that <span class="highlight">Pollachi’s brightest students</span> get the guidance they deserve to achieve top results.
+    </p>
+  </section>
+
+  <section class="cta-section">
+    <h3>Call the Best NEET & JEE Coaching for Pollachi Students</h3>
+    <p>Ready to start your success story with Profenaa? Contact us now and talk to our expert counselors directly.</p>
+    <a href="tel:+919500027638">📞 Call Now</a>
+  </section>
+
+<!-- Overlay Form -->
+<div class="overlay" id="overlay">
+  <div class="overlay-form">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <h2>Join Profenaa Courses</h2>
+
+    <form id="profenaaForm" action="https://api.web3forms.com/submit" method="POST">
+      <!-- Web3Forms Access Key -->
+      <input type="hidden" name="access_key" value="99e50867-139e-40f4-9053-a2f304ccb71a">
+
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="number" placeholder="Mobile Number" required pattern="[0-9]{10}">
+      <select name="course" required>
+        <option value="">Select Course</option>
+        <option value="neet">NEET</option>
+        <option value="jee">JEE</option>
+        <option value="foundation">Foundation Course</option>
+        <option value="crash">Crash Course</option>
+      </select>
+      <textarea name="comment" placeholder="Your Comment"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const overlay = document.getElementById('overlay');
+  const closeBtn = document.getElementById('closeBtn');
+
+  // Show overlay after 3 seconds
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }, 3000);
+  });
+
+  // Close button
+  closeBtn.addEventListener('click', () => {
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  });
+
+  // Click outside the form to close
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+      overlay.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+  });
+
+  // Handle form submission via Web3Forms
+  document.getElementById('profenaaForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData
+      });
+      const result = await response.json();
+
+      if (result.success) {
+        alert('✅ Form submitted successfully!');
+        form.reset();
+        overlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      } else {
+        alert('❌ Submission failed. Please try again later.');
+      }
+    } catch (error) {
+      alert('⚠️ Something went wrong. Please try again.');
+    }
+  });
+</script>
+</body>
+
+
+<!-- Footer Placeholder -->
+<div id="footer-placeholder"></div>
+
+<script src="load1.js"></script>
+</html>

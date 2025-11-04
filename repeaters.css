@@ -1,0 +1,663 @@
+/* General Reset & Fonts (minimal, safe) */
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+h2{
+  margin-bottom: 50px;
+  font-size: 2.2rem;
+}
+body {
+  background: #f9f9f9; 
+  color: #111;
+}
+a {
+  text-decoration: none; 
+  color: inherit;
+}
+
+/* Scroll Animations */
+.reveal {
+  opacity: 0; 
+  transform: translateY(50px); 
+  transition: all 1s ease-out;
+}
+.reveal.active {
+  opacity: 1; 
+  transform: translateY(0);
+}
+@media (max-width:768px) {
+  .reveal {
+    transform: translateY(30px);
+  }
+}
+
+/* Section Styles */
+section {
+  padding: 80px 5%;
+  position: relative;
+}
+
+/* Section 1: Hero */
+.section1-hero {
+  margin-top: 50px;
+  background: #e6f0ff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.section1-hero .hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+.section1-hero .hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #0056b3;
+}
+.section1-hero .hero-text p {
+  font-size: 1.2rem;
+}
+.section1-hero .hero-image {
+  flex: 1;
+  min-width: 300px;
+}
+.section1-hero .hero-image img {
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* CTA Button (Scoped) */
+.section1-hero .cta-button,
+.section4-courses .cta-button,
+.section10-cta .cta-button {
+  background: linear-gradient(90deg, #1e90ff, #0011ff);
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s;
+  display: inline-block;
+  margin-top: 15px;
+}
+.section1-hero .cta-button:hover,
+.section4-courses .cta-button:hover,
+.section10-cta .cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(0,191,255,0.5);
+}
+
+/* Section 2: Why Repeaters */
+.section2-why-repeaters {
+  background: #fff;
+  margin: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  border-radius: 20px;
+}
+.section2-why-repeaters h2 {
+  color: #1E3A8A;
+}
+.section2-why-repeaters .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+}
+.section2-why-repeaters .card {
+  background: linear-gradient(90deg, #1E3A8A,#a3baf5,#475989);
+  color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.4s;
+  transform-style: preserve-3d;
+}
+.section2-why-repeaters .card:hover {
+  transform: rotateY(10deg) scale(1.05);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+.section2-why-repeaters .card h3 {
+  margin-bottom: 10px;
+}
+.section2-why-repeaters .card p {
+  font-size: 0.95rem;
+}
+
+/* Section 3: Success Journey Timeline */
+.section3-success-journey {
+  background: #f0faff;
+}
+.section3-success-journey h2 {
+  color: #1E3A8A;
+}
+.section3-success-journey .timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+}
+.section3-success-journey .timeline::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #00bfff;
+  transform: translateY(-50%);
+}
+.section3-success-journey .step {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  width: 180px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin: 20px 0;
+}
+.section3-success-journey .step h4 {
+  margin-bottom: 10px;
+  color: #1E3A8A;
+}
+.section3-success-journey .step p {
+  font-size: 0.95rem;
+}
+.section3-success-journey .step img {
+  margin-bottom: 20px;
+  width: 90px;
+  margin-left: 30px;
+}
+
+/* Section 4: Courses */
+.section4-courses {
+  background: #fff;
+}
+.section4-courses h2 {
+  color: #1E3A8A;
+  margin-bottom: 50px;
+}
+.section4-courses .course-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 30px;
+}
+.section4-courses .course-card {
+  background: #e6f0ff;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+.section4-courses .course-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* Section 7: Testimonials */
+.section7-testimonials {
+  background: #fff;
+}
+.section7-testimonials h2 {
+  color: #1E3A8A;
+  margin-bottom: 50px;
+}
+.section7-testimonials .testimonial-cards {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+.section7-testimonials .testimonial-card {
+  min-width: 250px;
+  background: #e6f0ff;
+  border-radius: 20px;
+  padding: 20px;
+  flex-shrink: 0;
+  transition: 0.3s;
+}
+.section7-testimonials .testimonial-card:hover {
+  transform: scale(1.05);
+}
+
+/* Section 8: Statistics */
+.section8-statistics {
+  background: #f0faff;
+  text-align: center;
+}
+.section8-statistics h2 {
+  color: #1E3A8A;
+  margin-bottom: 50px;
+}
+.section8-statistics .counter {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1e90ff;
+}
+.section8-statistics .stat {
+  margin: 20px;
+}
+.section8-statistics .stat p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Section 9: FAQ */
+.section9-faq {
+  background: #fff;
+}
+.section9-faq h2 {
+  color: #1E3A8A;
+  margin-bottom: 50px;
+}
+.section9-faq .faq-item {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+.section9-faq .faq-item h4 {
+  cursor: pointer;
+  padding: 10px;
+  background: #e6f0ff;
+  border-radius: 10px;
+}
+.section9-faq .faq-item p {
+  display: none;
+  padding: 10px;
+  color: #333;
+}
+
+/* Section 10: Call to Action */
+.section10-cta {
+  background: #71b4f7;
+  color: #fff;
+  text-align: center;
+  padding: 100px 5%;
+}
+.section10-cta h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.section10-cta p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Responsive Adjustments */
+/* @media(max-width:768px){
+  .section1-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .section1-hero .hero-text,
+  .section1-hero .hero-image {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .section3-success-journey .timeline {
+    flex-direction: column;
+    align-items: center;
+  }
+  .section3-success-journey .timeline::after {
+    width: 4px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+} */
+/* ===== Responsive Styles ===== */
+
+/* Small Devices: Tablets (≤1024px) */
+@media (max-width: 1024px) {
+  /* Section 1 Hero */
+  .section1-hero {
+    padding: 50px 5%;
+  }
+  .section1-hero .hero-text h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .section1-hero .hero-text p {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .section1-hero .hero-image img {
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto 0 auto;
+    display: block;
+  }
+
+  /* Section 2 Cards */
+  .section2-why-repeaters .cards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  /* Section 3 Timeline */
+  .section3-success-journey .timeline {
+    flex-direction: column;
+    align-items: center;
+  }
+  .section3-success-journey .timeline::after {
+    width: 4px;
+    height: 80%;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .section3-success-journey .step {
+    width: 80%;
+    margin: 40px 0;
+  }
+  .section3-success-journey .step img {
+    margin: 0 auto 20px auto;
+    display: block;
+  }
+
+  /* Section 4 Courses */
+  .section4-courses .course-cards {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  /* Section 7 Testimonials */
+  .section7-testimonials .testimonial-cards {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .section7-testimonials .testimonial-card {
+    min-width: 220px;
+  }
+}
+
+/* Mobile Devices (≤768px) */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+ 
+  .section1-hero .hero-text h1 {
+    font-size: 2rem;
+  }
+  .section1-hero .hero-text p {
+    font-size: 1rem;
+  }
+
+  /* Section 2 Cards */
+  .section2-why-repeaters .cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* Section 3 Timeline */
+  .section3-success-journey .step {
+    width: 90%;
+  }
+
+  /* Section 4 Courses */
+  .section4-courses .course-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Section 7 Testimonials */
+  .section7-testimonials .testimonial-cards {
+    padding-bottom: 20px;
+  }
+
+  /* Section 8 Statistics */
+  .section8-statistics .stat {
+    margin: 15px 0;
+  }
+
+  /* Section 10 CTA */
+  .section10-cta {
+    padding: 60px 5%;
+  }
+}
+
+/* Extra Small Devices (≤480px) */
+@media (max-width: 480px) {
+  .section1-hero .hero-text h1 {
+    font-size: 1.6rem;
+  }
+   .section1-hero {
+    flex-direction: column;
+  }
+  .section1-hero .hero-text p {
+    font-size: 0.95rem;
+  }
+  .section1-hero .cta-button,
+  .section4-courses .cta-button,
+  .section10-cta .cta-button {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+  .section3-success-journey .step h4 {
+    font-size: 1rem;
+  }
+  .section3-success-journey .step p {
+    font-size: 0.85rem;
+  }
+  .section4-courses .course-card h3 {
+    font-size: 1.1rem;
+  }
+  .section4-courses .course-card p {
+    font-size: 0.9rem;
+  }
+  .section7-testimonials .testimonial-card p {
+    font-size: 0.9rem;
+  }
+  .section8-statistics .counter {
+    font-size: 2.2rem;
+  }
+  .section8-statistics .stat p {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* /* Overlay background  */
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(2px);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Form container */
+  .overlay.active { 
+    display: flex; 
+  }
+  .overlay-form {
+    background-color: #1E3A8A;
+    padding:60px 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    color: #fff;
+    animation: fadeInUp 0.5s ease;
+  }
+
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Close button */
+  .overlay-form .close-btn {
+    position: absolute;
+    top: 12px; right: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  .overlay-form .close-btn:hover { transform: rotate(90deg); }
+
+  /* Form elements */
+  .overlay-form h2 { margin-bottom: 20px; text-align: center; font-size: 1.6rem; }
+  .overlay-form input, 
+  .overlay-form select, 
+  .overlay-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  .overlay-form textarea { 
+    resize: none; 
+    height: 90px; 
+  }
+  .overlay-form select {
+     background-color: #ffffff;
+     width: 100%;
+      color: #000;
+     }
+
+  /* Submit button */
+  .overlay-form button {
+    width: 100%;
+    padding: 12px;
+    color: white;
+    background: linear-gradient(to right, #0786fd,rgb(135, 175, 235));
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .overlay-form button:hover { 
+        background: linear-gradient(to right,rgb(135, 175, 235), #0786fd);
+}
+
+
+  /* ==============================
+     RESPONSIVE DESIGN
+  ============================== */
+
+  /* Tablets (max 768px) */
+  @media (max-width: 768px) {
+    .overlay-form {
+      width: 90%;
+      max-width: 400px;
+      padding: 10px 30px;
+    }
+
+    .overlay-form h2 {
+      font-size: 1.4rem;
+    }
+
+    .overlay-form input,
+    .overlay-form select,
+    .overlay-form textarea {
+      font-size: 0.95rem;
+      padding: 10px 20px;
+      /* width: 95%; */
+    }
+ /* .overlay-form select {
+     width: 100%;
+     } */
+    .overlay-form button {
+      font-size: 0.95rem;
+      padding: 10px;
+    }
+  }
+
+  /* Mobile (max 480px) */
+  @media (max-width: 480px) {
+    .overlay-form {
+      width: 90%;
+      max-width: 350px;
+      padding: 20px 18px;
+      margin: 30px;
+      border-radius: 10px;
+    }
+.overlay-form select {
+     width: 100%;
+     }
+    .overlay-form h2 {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+
+    .overlay-form input,
+    .overlay-form select,
+    .overlay-form textarea {
+      font-size: 0.9
+    }
+  }
+
+  /* ✅ For Small Mobiles (≤375px) */
+@media (max-width: 376px) {
+  .overlay-form {
+    width: 90%;
+    max-width: 310px;
+    padding: 20px 25px;
+  }
+  .overlay-form h2 { font-size: 1.1rem; }
+  .overlay-form input,
+  .overlay-form select,
+  .overlay-form textarea {
+    font-size: 0.85rem;
+    padding: 9px 10px;
+  }
+  .overlay-form select {
+     width: 100%;
+     }
+  .overlay-form button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+/* ✅ For Extra Small Mobiles (≤320px) */
+@media (max-width: 320px) {
+  .overlay-form {
+    width: 95%;
+    max-width: 280px;
+    padding: 18px;
+  }
+  .overlay-form h2 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+  .overlay-form select {
+     width: 100%;
+     }
+  .overlay-form input,
+  .overlay-form select,
+  .overlay-form textarea {
+    font-size: 0.8rem;
+    padding: 8px 9px;
+  }
+  .overlay-form button {
+    font-size: 0.85rem;
+    padding: 9px;
+  }
+  .overlay-form .close-btn {
+    font-size: 18px;
+    top: 8px;
+    right: 8px;
+  }
+}

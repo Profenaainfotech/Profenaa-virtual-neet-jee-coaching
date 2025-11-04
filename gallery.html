@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profenaa Virtual NEET & JEE Coaching</title>
+    <link href="gallery.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Assets/academy logo.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- ✅ Meta Description -->
+  <meta name="description" content="Explore the Profenaa Virtual NEET & JEE Academy gallery — showcasing our vibrant campus life, classroom sessions, workshops, and student achievements across NEET and JEE programs.">
+
+  <!-- ✅ SEO Keywords -->
+  <meta name="keywords" content="Profenaa gallery, Profenaa campus life, NEET JEE coaching gallery, Profenaa events, Profenaa achievements, Profenaa NEET academy gallery, JEE classroom sessions, Profenaa workshops, Profenaa Coimbatore academy photos, NEET aspirant life, Profenaa student activities, NEET coaching in Coimbatore, Profenaa celebrations, Profenaa awards, Profenaa classroom environment, NEET toppers celebration, Profenaa academy photos, Profenaa virtual coaching gallery, Profenaa success stories, NEET and JEE student gallery">
+
+  <!-- ✅ Canonical URL -->
+  <link rel="canonical" href="https://online.profenaaneetjee.com/gallery.html">
+
+  <!-- ✅ Favicon -->
+  <link rel="icon" type="image/png" href="https://online.profenaaneetjee.com/Assets/academy%20logo.png">
+
+  <!-- ✅ Open Graph / Facebook -->
+  <meta property="og:title" content="Profenaa Academy Gallery | Campus Life, Events & Student Achievements">
+  <meta property="og:description" content="Discover Profenaa Academy’s vibrant NEET & JEE campus through our gallery — from interactive classrooms to memorable student events.">
+  <meta property="og:image" content="https://online.profenaaneetjee.com/Assets/gallery10.jpeg">
+  <meta property="og:url" content="https://online.profenaaneetjee.com/gallery.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Profenaa Virtual NEET & JEE Academy">
+
+  <!-- ✅ Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Profenaa Academy Gallery | NEET & JEE Campus Moments">
+  <meta name="twitter:description" content="Experience life at Profenaa Academy — a glimpse into our student activities, NEET & JEE sessions, and memorable events.">
+  <meta name="twitter:image" content="https://online.profenaaneetjee.com/Assets/gallery9.jpeg">
+
+</head>
+<body>
+
+       <!-- Navbar Placeholder -->
+  <div id="navbar-placeholder"></div>
+  
+  <script src="load.js"></script>
+
+        <!-- Section 1: Static Gallery -->
+     
+  <div class="gallery-container">
+    <section class="static-gallery">
+      <h2 class="gallery-title">Our Gallery</h2>
+
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <img src="Assets/gallary1.jpeg" alt="Classroom">
+          <div class="caption">Interactive classroom session with NEET toppers</div>
+        </div>
+        <div class="gallery-card">
+          <img src="Assets/gallary2.jpeg" alt="Workshop">
+          <div class="caption">Hands-on syllabus</div>
+        </div>
+        <div class="gallery-card">
+          <img src="Assets/gallery9.jpeg" alt="Achievement">
+          <div class="caption">Achievement day celebrations & awards</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Image Slider -->
+    <section class="slider-section">
+      <h3 class="slider-title">Moments</h3>
+      
+      <div class="slider-wrapper">
+        <span class="material-icons slider-arrow left-arrow" id="prevBtn">chevron_left</span>
+        
+        <div class="slider-container" id="slider">
+          <div class="slide"><img src="Assets/gallery14.jpeg" alt=""></div>
+          <div class="slide"><img src="Assets/gallary5.jpeg" alt=""></div>
+          <div class="slide"><img src="Assets/gallery6.jpeg" alt=""></div>
+          <div class="slide"><img src="Assets/gallery7.jpeg" alt=""></div>
+          <div class="slide"><img src="Assets/gallery17.jpeg" alt=""></div>
+
+        </div>
+
+        <span class="material-icons slider-arrow right-arrow" id="nextBtn">chevron_right</span>
+      </div>
+    </section>
+
+    <section class="vibrant-campus-gallery">
+  <h3 class="slider-title">Our Vibrant Campus Life</h3>
+  <div class="vibrant-campus-grid">
+    <img src="Assets/gallery10.jpeg" alt="">
+    <img src="Assets/gallery11.jpeg" alt="">
+    <img src="Assets/gallery12.jpeg"alt="">
+    <img src="Assets/gallery13.jpeg" alt="">
+    <img src="Assets/gallery14.jpeg" alt="">
+    <img src="Assets/gallery15.jpeg" alt="">
+    <img src="Assets/gallery16.jpeg" alt="">
+    <img src="Assets/gallery8.jpeg" alt="">
+    <img src="Assets/gallary4.jpeg" alt="">
+  </div>
+</section>
+</div>
+
+  <script src="Gallery.js"></script>
+
+  <!-- Overlay Form -->
+<div class="overlay" id="overlay">
+  <div class="overlay-form">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <h2>Join Profenaa Courses</h2>
+
+    <form id="profenaaForm" action="https://api.web3forms.com/submit" method="POST">
+      <!-- Web3Forms Access Key -->
+      <input type="hidden" name="access_key" value="99e50867-139e-40f4-9053-a2f304ccb71a">
+
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="number" placeholder="Mobile Number" required pattern="[0-9]{10}">
+      <select name="course" required>
+        <option value="">Select Course</option>
+        <option value="neet">NEET</option>
+        <option value="jee">JEE</option>
+        <option value="foundation">Foundation Course</option>
+        <option value="crash">Crash Course</option>
+      </select>
+      <textarea name="comment" placeholder="Your Comment"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const overlay = document.getElementById('overlay');
+  const closeBtn = document.getElementById('closeBtn');
+
+  // Show overlay after 3 seconds
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }, 3000);
+  });
+
+  // Close button
+  closeBtn.addEventListener('click', () => {
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  });
+
+  // Click outside the form to close
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+      overlay.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+  });
+
+  // Handle form submission via Web3Forms
+  document.getElementById('profenaaForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData
+      });
+      const result = await response.json();
+
+      if (result.success) {
+        alert('✅ Form submitted successfully!');
+        form.reset();
+        overlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      } else {
+        alert('❌ Submission failed. Please try again later.');
+      }
+    } catch (error) {
+      alert('⚠️ Something went wrong. Please try again.');
+    }
+  });
+</script>
+</body>
+
+<!-- Footer Placeholder -->
+<div id="footer-placeholder"></div>
+
+<script src="load1.js"></script>
+
+</html>
