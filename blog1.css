@@ -95,7 +95,9 @@
       box-shadow: 0 0 25px rgba(0,0,0,0.2);
       transition: transform 0.5s ease;
     }
-
+ .cta-section p{
+color:rgb(223, 223, 223); 
+}
     .cta-section:hover {
       transform: scale(1.02);
     }
