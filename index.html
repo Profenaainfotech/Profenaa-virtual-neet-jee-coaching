@@ -58,26 +58,10 @@ Profenaa Academy, online NEET classes, online JEE preparation, NEET live coachin
         <span id="section1-rotate" class="active">NEET</span>
       </h1>
       <p>Your Dream Entrance Exam with Expert - Led Online Courses from Top Faculties</p>
-      <a href="#" class="section1-btn">Enroll Now →</a>
+      <a href="https://forms.gle/WDAFwibZQncJFW5R7" class="section1-btn">Enroll Now →</a>
     </div>
   </section>
-<script>
-  document.querySelector('.section1-btn').addEventListener('click', function(e) {
-    e.preventDefault(); // prevent page scroll or reload
-    document.getElementById('overlay').classList.add('active');
-  });
 
-  document.getElementById('closeBtn').addEventListener('click', function() {
-    document.getElementById('overlay').classList.remove('active');
-  });
-
-  // Optional: close form when clicking outside it
-  window.addEventListener('click', function(e) {
-    if (e.target === document.getElementById('overlay')) {
-      document.getElementById('overlay').classList.remove('active');
-    }
-  });
-</script>
 
   <script>
     // Rotating text with bottom-to-up effect
@@ -344,7 +328,44 @@ Profenaa Academy, online NEET classes, online JEE preparation, NEET live coachin
   <script>
     AOS.init({ duration: 800, once: false });
   </script>
+   <!-- Toppers Section -->
+<section class="toppers-section">
+  <div class="toppers-container">
+    <h2 class="section-title">Our Topper's Success Stories</h2>
+    <p class="section-subtitle">Hear from our NEET & JEE achievers who made us proud</p>
 
+    <div class="toppers-grid">
+      
+      <!-- Topper 1 -->
+      <div class="topper-card">
+        <div class="topper-video">
+          <video controls>
+            <source src="Assets/speech 1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>   
+      </div>
+
+      <!-- Topper 2 -->
+      <div class="topper-card">
+    <img src="Assets/toppers.jpeg">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="learning-mode-section">
+  <div class="learning-content">
+    <h2>Choose Your <span>Learning Mode</span></h2>
+    <p>Profenaa offers both Online & Offline excellence. Pick your stream:</p>
+
+    <div class="learning-buttons">
+      <a href="contact_us.html" class="mode-btn">Online Stream</a>
+      <a href="https://profenaaneetjee.com/" class="mode-btn">Offline Stream</a>
+    </div>
+  </div>
+</section>
 <!-- section 5  -->
  <section class="section5-container">
     <div class="section5-title">THOUSANDS TRUST</div>
@@ -454,6 +475,9 @@ Profenaa Academy, online NEET classes, online JEE preparation, NEET live coachin
     </div>
   </section>
   <!-- Section 6 End -->
+
+
+
  <!-- Section 8 Start -->
   <section class="section8-container">
     <h2>Frequently Asked Questions</h2>

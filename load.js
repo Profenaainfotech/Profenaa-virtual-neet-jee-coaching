@@ -64,22 +64,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  setTimeout(() => {
-  const enrollBtn = document.querySelector(".login-btn");
-  const overlay = document.getElementById("overlay");
-  const closeBtn = document.getElementById("closeBtn");
+//   setTimeout(() => {
+//   const enrollBtn = document.querySelector(".login-btn");
+//   const overlay = document.getElementById("overlay");
+//   const closeBtn = document.getElementById("closeBtn");
 
-  if (enrollBtn && overlay && closeBtn) {
-    enrollBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      overlay.style.display = "flex";
-    });
+//   if (enrollBtn && overlay && closeBtn) {
+//     enrollBtn.addEventListener("click", (e) => {
+//       e.preventDefault();
+//       overlay.style.display = "flex";
+//     });
 
-    closeBtn.addEventListener("click", () => {
-      overlay.style.display = "none";
-    });
-  }
-}, 500);
+//     closeBtn.addEventListener("click", () => {
+//       overlay.style.display = "none";
+//     });
+//   }
+// }, 500);
 
 });
 
